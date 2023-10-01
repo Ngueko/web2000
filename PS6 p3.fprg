@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ba97421"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-28 12:20:03 PM"/>
+        <attribute name="created" value="YmE5NzQyMTtIQ1NUVS1CTjJaN0MzOzIwMjMtMDktMjg7MTE6MzU6MTAgQU07MjYxNw=="/>
+        <attribute name="edited" value="YmE5NzQyMTtIQ1NUVS1CTjJaN0MzOzIwMjMtMDktMjg7MTI6MjA6MDMgUE07MTsyNzM3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="prinAmt" type="Real" array="False" size=""/>
+            <declare name="matYrs" type="Integer" array="False" size=""/>
+            <declare name="intRate" type="Integer" array="False" size=""/>
+            <declare name="principle" type="Integer" array="False" size=""/>
+            <declare name="intAmt" type="Real" array="False" size=""/>
+            <input variable="prinamt"/>
+            <input variable="intAmt"/>
+            <if expression="prinAmt&gt;100000">
+                <then>
+                    <assign variable="intRate" expression="0.06"/>
+                </then>
+                <else>
+                    <if expression="prinAmt&gt;=50000">
+                        <then>
+                            <if expression="matYrs=5">
+                                <then>
+                                    <assign variable="intRate" expression="0.04"/>
+                                </then>
+                                <else>
+                                    <if expression="matYrs=10">
+                                        <then>
+                                            <assign variable="intRate" expression="0.05"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;Incorrect Years to Maturity Input. Please restart program and try again. :)&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <assign variable="intRate" expression="0.02"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="matYrs" expression="prinAmt*intRate"/>
+            <output expression="&quot;Principle&quot; &amp; prinAmt" newline="True"/>
+            <output expression="&quot;Interest rate&quot; &amp; intRate" newline="True"/>
+            <output expression="&quot;Interst amount&quot; &amp; intAmt" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
