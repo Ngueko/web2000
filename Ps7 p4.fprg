@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ba97421"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-06 10:05:39 AM"/>
+        <attribute name="created" value="YmE5NzQyMTtIQ1NUVS1CTjJaN0MzOzIwMjMtMTAtMDY7MDk6NDQ6MjIgQU07MjYxNQ=="/>
+        <attribute name="edited" value="YmE5NzQyMTtIQ1NUVS1CTjJaN0MzOzIwMjMtMTAtMDY7MTA6MDU6MzkgQU07MTsyNzIw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="stop" type="Integer" array="False" size=""/>
+            <declare name="start" type="Integer" array="False" size=""/>
+            <declare name="increment" type="String" array="False" size=""/>
+            <declare name="current" type="String" array="False" size=""/>
+            <input variable="stop"/>
+            <input variable="start"/>
+            <input variable="increment"/>
+            <assign variable="current" expression="start"/>
+            <while expression="current&lt;=stop">
+                <output expression="current &gt; increment = current" newline="True"/>
+                <output expression="current&gt;stop=increment" newline="True"/>
+                <output expression="current&gt;start=current" newline="True"/>
+            </while>
+            <output expression="current&lt;start=current" newline="True"/>
+            <output expression="current&lt;stop=current" newline="True"/>
+            <output expression="current &lt; increment = current" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

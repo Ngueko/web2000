@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ba97421"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-08 01:12:06 AM"/>
+        <attribute name="created" value="YmE5NzQyMTtIQ1NUVS1CTjJaN0MzOzIwMjMtMTAtMDg7MTI6NTI6MzkgQU07MjYxOA=="/>
+        <attribute name="edited" value="YmE5NzQyMTtIQ1NUVS1CTjJaN0MzOzIwMjMtMTAtMDg7MDE6MTI6MDYgQU07MTsyNzE0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="continue" type="String" array="False" size=""/>
+            <declare name="discountTotal" type="Real" array="False" size=""/>
+            <declare name="quantity" type="Integer" array="False" size=""/>
+            <declare name="price" type="Real" array="False" size=""/>
+            <declare name="Extendedprice" type="Real" array="False" size=""/>
+            <declare name="discountpercent" type="Real" array="False" size=""/>
+            <declare name="discountamount" type="Real" array="False" size=""/>
+            <declare name="Total" type="Real" array="False" size=""/>
+            <input variable="quantity"/>
+            <input variable="price"/>
+            <input variable="discountPercent"/>
+            <assign variable="Extendedprice" expression="quantity * price"/>
+            <if expression="extendedPrice &gt; 10000.00">
+                <then>
+                    <output expression="discountPercent = 0.25" newline="True"/>
+                </then>
+                <else>
+                    <output expression="discountPercent = 0.10" newline="True"/>
+                </else>
+            </if>
+            <assign variable="discountamount" expression="extendedPrice * discountPercent"/>
+            <assign variable="Total" expression="extendedPrice - discountAmount"/>
+            <output expression="&quot;Extended Price&quot; = extendedprice" newline="True"/>
+            <output expression="&quot;Discount Amount&quot; = discountamount" newline="True"/>
+            <output expression="&quot;Total&quot; = total" newline="True"/>
+            <assign variable="discounttotal" expression="discounttotal + discountamount"/>
+            <output expression="&quot; sum of all discounts &quot; = discounttotal" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
