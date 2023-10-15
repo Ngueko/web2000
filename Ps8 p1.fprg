@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ba97421"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-12 12:15:01 PM"/>
+        <attribute name="created" value="YmE5NzQyMTtIQ1NUVS1CTjJaN0MzOzIwMjMtMTAtMTI7MTE6MDA6MTQgQU07MjU5OA=="/>
+        <attribute name="edited" value="YmE5NzQyMTtIQ1NUVS1CTjJaN0MzOzIwMjMtMTAtMTI7MTI6MTU6MDEgUE07MTsyNzI0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="prinAmt" type="Real" array="False" size=""/>
+            <declare name="intRate" type="Real" array="False" size=""/>
+            <declare name="yrs" type="Integer" array="False" size=""/>
+            <declare name="begAmt" type="Real" array="False" size=""/>
+            <declare name="totalAmt" type="Real" array="False" size=""/>
+            <declare name="infoTable" type="Real" array="True" size="3"/>
+            <assign variable="yrs" expression="1"/>
+            <output expression="&quot;Enter principle amount: &quot;" newline="True"/>
+            <input variable="prinAmt"/>
+            <assign variable="begAmt" expression="prinAmt"/>
+            <output expression="&quot;Enter interest rate: &quot;" newline="True"/>
+            <input variable="intRate"/>
+            <output expression="&quot;Years&quot; &amp; &quot; &quot;" newline="False"/>
+            <output expression="&quot;Beggining Balance&quot; &amp; &quot; &quot;" newline="False"/>
+            <output expression="&quot;Ending Balance&quot; &amp; &quot; &quot;" newline="True"/>
+            <while expression="yrs &lt;= 5">
+                <assign variable="totalAmt" expression="begAmt * (1 + intRate)"/>
+                <assign variable="infoTable[0]" expression="yrs"/>
+                <assign variable="infoTable[1]" expression="begAmt"/>
+                <assign variable="infoTable[2]" expression="totalAmt"/>
+                <output expression="infoTable[0] &amp; &quot; &quot;" newline="False"/>
+                <output expression="&quot;$&quot; &amp; infoTable[1] &amp; &quot; &quot;" newline="False"/>
+                <output expression="&quot;$&quot; &amp; infoTable[2] &amp; &quot; &quot;" newline="True"/>
+                <assign variable="begAmt" expression="totalAmt"/>
+                <assign variable="yrs" expression="yrs+1"/>
+            </while>
+            <output expression="&quot;Total Interest Earned: $&quot; &amp; (totalAmt-prinAmt)" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

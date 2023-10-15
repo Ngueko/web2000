@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ba97421"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-12 12:34:20 PM"/>
+        <attribute name="created" value="YmE5NzQyMTtIQ1NUVS1CTjJaN0MzOzIwMjMtMTAtMTI7MTI6MTY6MDQgUE07MjYyMA=="/>
+        <attribute name="edited" value="YmE5NzQyMTtIQ1NUVS1CTjJaN0MzOzIwMjMtMTAtMTI7MTI6MzQ6MjAgUE07MTsyNzI2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="first" type="Integer" array="False" size=""/>
+            <declare name="second" type="Integer" array="False" size=""/>
+            <declare name="as" type="Integer" array="False" size=""/>
+            <assign variable="first" expression="1"/>
+            <assign variable="second" expression="1"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="next" type="Integer" array="False" size=""/>
+            <output expression="&quot;fibonaci sequence&quot;" newline="True"/>
+            <output expression="first" newline="True"/>
+            <output expression="second" newline="True"/>
+            <for variable="i" start="1" end="18" direction="inc" step="1">
+                <assign variable="next" expression="first + second"/>
+                <assign variable="first" expression="second"/>
+                <assign variable="second" expression="next"/>
+            </for>
+            <output expression="&quot;End of Fibonacci Sequence.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
